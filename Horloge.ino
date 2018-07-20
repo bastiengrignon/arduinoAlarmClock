@@ -1,28 +1,3 @@
-#include "driver_isr.h"
-
-//--------------------A faire plus tard
-/*  Version 1.1 : 
-    Ajout switch pour allumer/éteindre le buzzer          (Fait logiciellement)
-    Version 1.2 : 
-    Ajout bouton poussoir affichage alarme                (~~~plus qu'a installer)
-    Version 1.3 : 
-    Utilisation d'interruption                            (fait)
-    Envoi horaire des bus en fonction du réveil          (xxxEnvoi mais bizarre !)
-    plusieurs alarmes                                     (~x~fait)
-   
-    Aucun delay() pour buzzer                             (A faire)
-    
-    if (jour de changement d'heure d'été){
-     heure = heure + 1
-    if (jour de changement d'heure d'hiver){
-     heure = heure - 1
-*/
-//--------------------
-/*Bluetooth non utilisé, utilisation voie série 
-#include <SoftwareSerial.h>
-SoftwareSerial HC06(10, 11); // RX | TX
-*/
-
 /************************************************************************/
 /*                Librairie RTC, Afficheur 7 segments                   */
 /************************************************************************/
@@ -59,6 +34,7 @@ typedef enum{
 	uint8_t dw;		// jours de la semaine
 }rtc_datetime;
 rtc_datetime datetime;
+
 //Configuration initiale alarme
 uint8_t h_alarme = 0;
 uint8_t m_alarme = 0;
